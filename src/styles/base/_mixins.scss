@@ -1,0 +1,43 @@
+//responsive
+@mixin mobile {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+
+//styles with mixins
+
+@mixin size($num1, $num2) {
+	width: $num1;
+	height: $num2;
+}
+
+@mixin flex($justify, $align, $direction: row) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+@mixin bgImg($url, $size: cover, $position) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: $size;
+	background-position: $position;
+}
+
+@mixin button() {
+	cursor: pointer;
+	border: none;
+	font-weight: 600;
+	@include size(7.5rem, 3rem);
+	border-radius: 0.3rem;
+}
+
+@mixin position($type, $top, $right, $bottom, $left) {
+	position: $type;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}

@@ -1,0 +1,27 @@
+.confirm__Container {
+	@include flex(center, center);
+	flex-direction: column;
+	text-align: center;
+
+	h1 {
+		margin: 1.5rem 0 1rem 0;
+		color: $Marine_blue;
+		font-size: 2.2rem;
+	}
+	p {
+		color: $Cool_gray;
+		width: 28rem;
+		line-height: 1.5rem;
+		font-weight: 500;
+	}
+
+	@include mobile() {
+		@include size(90%, 30rem);
+
+		p {
+			width: 19rem;
+			font-weight: 400;
+			letter-spacing: 0.01rem;
+		}
+	}
+}

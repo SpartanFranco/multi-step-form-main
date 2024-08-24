@@ -1,0 +1,48 @@
+.buttonNav__container {
+	width: 100%;
+	@include position(absolute, '', 0, 0.5rem, '');
+	@include flex(space-between, center);
+
+	@include mobile() {
+		@include position(fixed, '', 0, 0, 0);
+		background: $White;
+		@include size(100%, 5.5rem);
+	}
+}
+.buttonNav__back {
+	background-color: transparent;
+	color: $Cool_gray;
+	@include position(absolute, '', '', '', 0);
+	@include button();
+
+	@include mobile() {
+		margin-left: 1rem;
+	}
+
+	&:hover {
+		color: $Marine_blue;
+	}
+}
+.buttonNav__next {
+	color: $White;
+	background-color: $Marine_blue;
+	@include position(absolute, '', 0, '', '');
+	@include button();
+
+	&:hover {
+		background-color: $Marine_blue2;
+	}
+	@include mobile() {
+		margin-right: 1rem;
+	}
+}
+.buttonNav__confirm {
+	background-color: $Purplish_blue;
+	color: $White;
+	@include button();
+	@include position(absolute, '', 0, '', '');
+
+	@include mobile() {
+		margin-right: 1rem;
+	}
+}

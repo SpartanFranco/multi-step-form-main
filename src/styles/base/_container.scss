@@ -1,0 +1,28 @@
+.container {
+	@include flex(start, start);
+	@include size(72%, 90%);
+	flex-direction: column;
+	position: relative;
+	h1 {
+		color: $Marine_blue;
+		font-size: 2.3rem;
+		margin: 0.7rem 0 0.5rem 0;
+	}
+	.text {
+		font-weight: 500;
+		color: $Cool_gray;
+		margin-bottom: 2rem;
+	}
+
+	@include mobile() {
+		@include size(85%, 90%);
+		h1 {
+			font-size: 1.8rem;
+			margin: 2rem 0 0.4rem 0;
+		}
+		.text {
+			line-height: 1.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+}

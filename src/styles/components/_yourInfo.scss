@@ -1,0 +1,53 @@
+.yourinfo__form {
+	@include size(100%, 100%);
+
+	@include mobile() {
+		margin-bottom: 2rem;
+	}
+}
+
+.yourinfo__divInputs {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: 1.5rem;
+	label {
+		margin-bottom: 0.5rem;
+		color: $Marine_blue;
+		font-weight: 400;
+	}
+	p {
+		color: $Strawberry_red;
+		position: absolute;
+		right: 0;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		@include mobile() {
+			position: relative;
+			right: 0;
+		}
+	}
+
+	input {
+		@include size(100%, 3.2rem);
+		border-radius: 0.3rem;
+		border: solid 1px $Light_gray;
+		color: $Marine_blue;
+		font-weight: 500;
+		font-size: 1rem;
+		padding: 1rem;
+		&:focus {
+			border-color: $Purplish_blue;
+		}
+	}
+
+	@include mobile() {
+		margin-top: 1rem;
+		input {
+			@include size(100%, 2.5rem);
+		}
+	}
+}
+.name {
+	margin-top: 0;
+}

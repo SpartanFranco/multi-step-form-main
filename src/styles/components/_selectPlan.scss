@@ -1,0 +1,101 @@
+.selectPlan__container {
+	@include size(100%, fit-content);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.2rem;
+
+	@include mobile() {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.selectPlan__cards {
+	cursor: pointer;
+	border: 0.1rem solid $Light_gray;
+	border-radius: 0.5rem;
+	background-color: transparent;
+	padding: 1rem 0 1rem 1rem;
+	@include flex(space-between, start, column);
+
+	section {
+		padding-top: 3rem;
+		text-align: left;
+		h2 {
+			color: $Marine_blue;
+			font-weight: 500;
+			margin-bottom: 0.2rem;
+			font-size: 1.2rem;
+		}
+		p {
+			color: $Cool_gray;
+			font-size: 1rem;
+			font-weight: 500;
+
+			span {
+				color: $Marine_blue;
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+		}
+	}
+	&:hover {
+		border: 0.1rem solid $Marine_blue;
+	}
+
+	@include mobile() {
+		@include flex(start, center);
+		@include size(100%, 5rem);
+		section {
+			padding: 1rem 0 1rem 0;
+			margin-left: 0.7rem;
+			text-align: left;
+		}
+	}
+}
+
+.selectPlan__section {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	background: $Magnolia;
+	border-radius: 0.3rem;
+	@include flex(center, center);
+	margin-top: 1rem;
+	height: 3rem;
+
+	.selectPlan__btnContainer {
+		background-color: $Marine_blue;
+		border-radius: 1.5rem;
+		position: relative;
+		@include size(3.2rem, 1.6rem);
+		margin: 0 1rem 0 1rem;
+		@include flex(start, center);
+
+		.selectPlan__btnOff {
+			background-color: $White;
+			border-radius: 100%;
+			position: absolute;
+			@include size(1rem, 1rem);
+			transform: translateX(0.3rem);
+			transition: 0.3s ease;
+		}
+		.selectPlan__btnActive {
+			transform: translateX(1.85rem);
+			transition: 0.3s ease;
+		}
+	}
+	@include mobile() {
+		margin: 0 0 1.5rem 0;
+	}
+}
+
+.selectPlan__text {
+	color: $Cool_gray;
+}
+.selectPlan__textActive {
+	color: $Marine_blue;
+}
+
+.bg__focus {
+	background: $Magnolia;
+	border: 0.1rem solid $Marine_blue;
+}

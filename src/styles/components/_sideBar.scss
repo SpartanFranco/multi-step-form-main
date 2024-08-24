@@ -1,0 +1,59 @@
+.sidebar__container {
+	@include bgImg('/src/assets/images/bg-sidebar-desktop.svg', cover, bottom);
+	border-radius: 1rem;
+	padding-top: 0.7rem;
+
+	li {
+		margin: 1.5rem 0 0 2rem;
+		color: $White;
+		@include flex(start, center);
+
+		span {
+			color: $Cool_gray;
+		}
+		p {
+			font-weight: 500;
+		}
+	}
+
+	@include mobile() {
+		border-radius: 0;
+		@include size(100%, 9.5rem);
+		@include bgImg(
+			'/src/assets/images/bg-sidebar-mobile.svg',
+			fit-content,
+			bottom
+		);
+		ul {
+			@include flex(center, start, '');
+		}
+
+		.sidebar__step {
+			display: none;
+		}
+
+		li {
+			margin: 0.5rem 0 0 0;
+		}
+
+		.sidebar__num {
+			@include size(2rem, 2rem);
+			font-size: 0.8rem;
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+.sidebar__num {
+	border-radius: 100%;
+	border: 1px solid $Light_blue;
+	margin-right: 1rem;
+	font-weight: 600;
+	@include size(2rem, 2rem);
+	@include flex(center, center);
+}
+.sidebar__navActive {
+	color: #000000;
+	background-color: $Light_blue;
+	border: none;
+}

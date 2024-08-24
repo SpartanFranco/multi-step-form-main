@@ -1,0 +1,41 @@
+.main__container {
+	background: $Magnolia;
+	@include size(100%, 100vh);
+	@include flex(center, center);
+	padding: 0.5rem;
+
+	@include mobile() {
+		padding: 0;
+	}
+	.main__div {
+		background: $White;
+		border-radius: 1rem;
+		box-shadow: 0 0.6rem 4rem -3rem;
+		display: grid;
+		grid-template-columns: 0.8fr 2fr;
+		padding: 1rem;
+		@include size(60rem, 38rem);
+
+		@include mobile() {
+			background: $Magnolia;
+			@include flex(start, center, column);
+			@include size(100%, 100vh);
+			padding: 0;
+			border-radius: 0;
+		}
+
+		.main__forms {
+			@include flex(center, center);
+
+			@include mobile() {
+				position: fixed;
+				top: 5rem;
+				background: $White;
+				min-height: 20rem;
+				@include size(93%, fit-content);
+				max-width: 40rem;
+				border-radius: 0.7rem;
+			}
+		}
+	}
+}
