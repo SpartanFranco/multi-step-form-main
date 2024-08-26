@@ -99,3 +99,11 @@
 	background: $Magnolia;
 	border: 0.1rem solid $Marine_blue;
 }
+.selectPlan__error {
+	color: $Strawberry_red;
+	@include position(absolute, 5.5rem, '', '', 0);
+
+	@include mobile() {
+		@include position(relative, 0, '', '', 0);
+	}
+}

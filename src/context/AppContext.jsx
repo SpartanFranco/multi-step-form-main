@@ -7,6 +7,8 @@ const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
 	const [state, setState] = useState({
 		plan: { title: '', price: 0 },
+		isPlan: false,
+		errorMessage: undefined,
 		monthly: true,
 		isConfirm: false,
 		arrOns: [],
@@ -17,9 +19,9 @@ const AppContextProvider = ({ children }) => {
 			name: '',
 			email: '',
 			phone_number: '',
-			Online_service: false,
-			Larger_storage: false,
-			Customizable_Profile: false,
+			'Online service': false,
+			'Larger storage': false,
+			'Customizable Profile': false,
 		},
 	});
 

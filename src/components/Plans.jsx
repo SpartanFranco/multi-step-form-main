@@ -8,11 +8,12 @@ const Plans = ({ icon, title, priceTime }) => {
 	const { monthly, plan } = state;
 
 	const handlePlan = () => {
-		if (plan.title === title) {
-			setState({ ...state, plan: { title: '', price: 0 } });
-		} else {
-			setState({ ...state, plan: { title: title, price: priceTime } });
-		}
+		setState({
+			...state,
+			isPlan: true,
+			errorMessage: undefined,
+			plan: { title: title, price: priceTime },
+		});
 	};
 	return (
 		<button

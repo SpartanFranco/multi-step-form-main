@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonNav from './ButtonNav';
 
 import { useFormContext } from 'react-hook-form';
@@ -14,7 +15,7 @@ const YourInfo = () => {
 	};
 
 	return (
-		<div className='container'>
+		<div className='container animate__animated animate__slideInDown'>
 			<h1>Personal info</h1>
 			<p className='text'>
 				{' '}

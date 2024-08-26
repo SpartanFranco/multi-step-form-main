@@ -8,6 +8,7 @@ const Add_OnsChecks = ({ title, text, priceTime }) => {
 	const { state, setState } = useContext(AppContext);
 	const { register, getValues, watch } = useFormContext();
 	const { monthly } = state;
+	const newTitle = title;
 
 	const checked = () => {
 		if (!getValues(title)) {
@@ -28,13 +29,13 @@ const Add_OnsChecks = ({ title, text, priceTime }) => {
 			className={`addOns__checkbox ${watch(title) ? 'addOns__focusChecks' : ' '}`}
 		>
 			<input
-				id='checkbox'
+				id={title}
 				onClick={checked}
 				className='addOns__input'
 				type='checkbox'
-				{...register(title)}
+				{...register(newTitle)}
 			/>
-			<label htmlFor='checkbox'>
+			<label htmlFor={title}>
 				<h3>{title}</h3>
 				<span> {text}</span>
 			</label>

@@ -1,10 +1,10 @@
 import React from 'react';
-
+import SvgThankYou from '/src/assets/images/icon-thank-you.svg';
 const Confirm = () => {
 	return (
 		<div className='confirm__Container'>
 			<img
-				src='/src/assets/images/icon-thank-you.svg'
+				src={SvgThankYou}
 				alt='icon-thank-you'
 			/>
 			<h1>Thank you!</h1>

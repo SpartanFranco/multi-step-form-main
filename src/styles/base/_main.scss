@@ -28,7 +28,7 @@
 			@include flex(center, center);
 
 			@include mobile() {
-				position: fixed;
+				position: absolute;
 				top: 5rem;
 				background: $White;
 				min-height: 20rem;

@@ -21,8 +21,12 @@ const SelectPlan = () => {
 		<div className='container'>
 			<h1> Select your plan</h1>
 			<p className='text'>You have the option of monthly or yearly billing.</p>
-
 			<div className='selectPlan__container'>
+				{state.errorMessage !== undefined && (
+					<p className='selectPlan__error'>
+						Please select a plan before continuing
+					</p>
+				)}
 				<Plans
 					icon={iconArcade}
 					title={'Arcade'}
@@ -63,7 +67,7 @@ const SelectPlan = () => {
 			<ButtonNav
 				back={true}
 				next={'add_ons'}
-				nextStep={true}
+				inSelectPlan={true}
 			/>
 		</div>
 	);
